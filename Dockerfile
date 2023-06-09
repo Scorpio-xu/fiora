@@ -5,8 +5,6 @@ WORKDIR /usr/app/fiora
 COPY packages ./packages
 COPY package.json tsconfig.json yarn.lock lerna.json ./
 
-EXPOSE 9200
-
 RUN yarn install
 
 RUN yarn build:web
